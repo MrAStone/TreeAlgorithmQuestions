@@ -46,18 +46,18 @@
             char[] A = new char[] { '+', '4', '*', '9', '6' };
             int[] B = new int[] { 1, -1, 3, -1, -1 };
             int[] C = new int[] { 2, -1, 4, -1, -1 };
-            Travers(0, A, B, C);
+            Traverse(0, A, B, C);
 
         }
-        static void Travers(int pos, char[] A, int[] B, int[] C)
+        static void Traverse(int pos, char[] A, int[] B, int[] C)
         {
             if (B[pos] !=-1)
             {
-                Travers(B[pos], A, B, C);
+                Traverse(B[pos], A, B, C);
             }
             if (C[pos] !=-1)
             {
-                Travers(C[pos], A, B, C);
+                Traverse(C[pos], A, B, C);
             }
             Console.WriteLine(A[pos]);
         }
